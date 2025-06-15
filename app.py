@@ -118,7 +118,6 @@ if 'quiz_index' not in st.session_state:
 if 'quiz_score' not in st.session_state:
     st.session_state.quiz_score = 0
 
-model = load_model()
 
 # UI
 st.title("♻️ Game Edukasi Pemilahan Sampah")
