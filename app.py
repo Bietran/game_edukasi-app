@@ -1,5 +1,4 @@
 # main.py - Game Edukasi Pemilahan Sampah (Versi Final - Quiz Berjalan)
-
 import streamlit as st
 import random
 import numpy as np
