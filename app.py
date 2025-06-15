@@ -2,7 +2,6 @@
 
 import streamlit as st
 import random
-import joblib
 import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import load_iris
