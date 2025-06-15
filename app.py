@@ -4,6 +4,8 @@ import streamlit as st
 import random
 import joblib
 import numpy as np
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.datasets import load_iris
 import os
 import base64
 import time
@@ -23,10 +25,19 @@ def play_local_sound(sound_file_path):
             """
             st.markdown(md, unsafe_allow_html=True)
 
-# === MODEL KNN === #
+
+# === TRAIN MODEL SECARA LANGSUNG === #
 @st.cache_resource
-def load_model():
-    return joblib.load("model_knn.pkl")
+def train_model():
+    # Contoh sederhana pakai dataset iris
+    data = load_iris()
+    X, y = data.data, data.target
+    model = KNeighborsClassifier(n_neighbors=3)
+    model.fit(X, y)
+    return model
+
+model = train_model()
+
 
 # Soal mini quiz
 quiz_questions = [
